@@ -1,6 +1,6 @@
 package clockPack;
 
-public class DateClass implements ClockInterface {
+public class DateClass extends ClockAbstract  {
 	
 	private int year;
 	private int month;
@@ -41,7 +41,7 @@ public class DateClass implements ClockInterface {
 
 	// Checks if integers are within scope, if they are, the integers are set as dates.
 	@Override
-	public boolean qualifyInt(int year, int month, int day) {
+	public boolean validateInput(int year, int month, int day) {
 		// TODO Auto-generated method stub
 		if (year <= 9999 && year >= 0 &&
 				month <= 12 && month > 0 &&

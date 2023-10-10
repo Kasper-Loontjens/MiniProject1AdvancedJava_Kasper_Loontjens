@@ -9,14 +9,14 @@ public abstract class Brain {
 	//Brain controls display
 	
 	// Creates enum for the clocks different states, changing these will change the UI
-	public enum DisplayState{
+	protected enum DisplayState{
 		DISPLAYTIME,
 		CHANGETIME,
 		DISPLAYDATE,
 		CHANGEDATE
 	}
-	DisplayState displayState = DisplayState.DISPLAYTIME;
-	 
+	private DisplayState displayState = DisplayState.DISPLAYTIME;
+	
 	// updates the GUI
 	protected abstract void updateGUI();
 

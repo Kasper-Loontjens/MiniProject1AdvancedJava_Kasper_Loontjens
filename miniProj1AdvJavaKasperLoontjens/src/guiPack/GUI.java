@@ -132,15 +132,18 @@ public class GUI extends Brain{
 			switch (getDisplayState()) {
 			case CHANGETIME: 
 				if (timeClass.readyToSet(firstResponseField.getText(), secondResponseField.getText(), thirdResponseField.getText())) {
-					
 					setClicked();
+				}else {
+					textPane.setText("Incorrect input, Set new time.");
+
 				}
 				break;
 			case CHANGEDATE: 
 				if (dateClass.readyToSet(firstResponseField.getText(), secondResponseField.getText(), thirdResponseField.getText())) {
-				
 					setClicked();
-				}				
+				}else {
+					textPane.setText("Incorrect input, Set new date.");
+				}
 				break;
 			case DISPLAYTIME: 
 				setClicked();

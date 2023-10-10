@@ -1,6 +1,6 @@
 package clockPack;
 
-public class TimeClass implements ClockInterface{
+public class TimeClass extends ClockAbstract {
 	private int hour;
 	private int minute;
 	private int second;
@@ -14,11 +14,11 @@ public class TimeClass implements ClockInterface{
 	
 	// Checks if integers are within scope, if they are, the integers are set as time.
 	@Override
-	public boolean qualifyInt(int hour, int minute, int second) {
+	public boolean validateInput(int hour, int minute, int second) {
 		// TODO Auto-generated method stub
-		if (hour < 24 && hour > 0 &&
-				minute <= 60 && minute > 0 &&
-				second <= 60 && second > 0) {
+		if (hour < 24 && hour >= 0 &&
+				minute < 60 && minute >= 0 &&
+				second < 60 && second >= 0) {
 			
 			setHour(hour);
 			setMinute(minute);
